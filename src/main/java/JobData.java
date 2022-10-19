@@ -91,7 +91,6 @@ public class JobData {
      * @return      List of all jobs with at least one field containing the value
      */
     public static ArrayList<HashMap<String, String>> findByValue(String value) {
-
         // load data, if not already loaded
         loadData();
 
@@ -99,13 +98,13 @@ public class JobData {
         // loop through allJobs
         for(HashMap<String, String> aJob  : allJobs) {
             // loop through all values in each job
-            for(String val : aJob.values()) {
-                if(val.equals(value) || val.contains(value)) {
+            for(Map.Entry<String, String> val : aJob.entrySet()) {
+                if(val.getValue().toLowerCase().contains(value.toLowerCase())) {
                     searchedJob.add(aJob);
                 }
             }
         }
-        //System.out.println("You found " + searchedJob.size() + " results.");
+
         return searchedJob;
     }
 
