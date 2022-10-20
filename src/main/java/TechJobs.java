@@ -125,7 +125,7 @@ public class TechJobs {
                 System.out.println("\n*****");
                 for(Map.Entry<String, String> job : aJob.entrySet()) {
                     // Print keys and values of each job in someJobs.
-                    System.out.println(job.getKey().toString() + ": " + job.getValue().toString());
+                    System.out.println(job.getKey() + ": " + job.getValue());
                 }
                 System.out.println("*****");
             }
