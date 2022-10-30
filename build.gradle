@@ -5,7 +5,7 @@ plugins {
 group 'org.launchcode'
 version '1.0-SNAPSHOT'
 
-sourceCompatibility = 1.8
+sourceCompatibility = 11
 
 repositories {
     mavenCentral()
@@ -13,5 +13,6 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
-    implementation('org.apache.commons:commons-csv:1.4')
+    implementation('org.apache.commons:commons-csv:1.9.0')
 }
+targetCompatibility = JavaVersion.VERSION_11
