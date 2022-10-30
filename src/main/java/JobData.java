@@ -95,11 +95,11 @@ public class JobData {
         loadData();
 
         ArrayList<HashMap<String, String>> searchedJob = new ArrayList<>();
-        // loop through allJobs
+
         for(HashMap<String, String> aJob  : allJobs) {
-            // loop through all values in each job
-            for(Map.Entry<String, String> val : aJob.entrySet()) {
-                if(val.getValue().toLowerCase().contains(value.toLowerCase())) {
+            // Loop through values in each jobInfo
+            for(String val : aJob.values()) {
+                if(val.toUpperCase().contains(value.toUpperCase())) {
                     searchedJob.add(aJob);
                 }
             }
